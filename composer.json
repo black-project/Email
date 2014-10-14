@@ -1,0 +1,24 @@
+{
+    "name": "black/email",
+    "description": "A simple email value object for your projects",
+    "keywords": ["library", "black-project", "email", "value-object"],
+    "homepage": "http://www.lablackroom.com",
+    "license": "MIT",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Email\\": "src/Email/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "spec\\": "spec/"
+        }
+    },
+    "require": {
+        "php": ">=5.4"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "~2.0"
+    }
+}
