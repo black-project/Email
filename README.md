@@ -3,8 +3,9 @@ Email
 
 PHP 5.4+ library to make working with Email safer, easier, and fun!
 
-[![Build Status](https://travis-ci.org/black/PHP-DI.png?branch=master)](https://travis-ci.org/black/email)
-[![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/black/email/badges/quality-score.png)](https://scrutinizer-ci.com/g/black/email/)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/9bfe8343-0fd5-412b-a3f5-2b364d602c56/big.png)](https://insight.sensiolabs.com/projects/9bfe8343-0fd5-412b-a3f5-2b364d602c56)
+[![Build Status](https://travis-ci.org/black-project/Email.png?branch=master)](https://travis-ci.org/black-project/Email)
+[![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/black/Email/badges/quality-score.png)](https://scrutinizer-ci.com/g/black/Email/)
 [![Latest Stable Version](https://poser.pugx.org/black/email/v/stable.png)](https://packagist.org/packages/black/email)
 [![Total Downloads](https://poser.pugx.org/black/email/downloads.png)](https://packagist.org/packages/black/email)
 
