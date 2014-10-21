@@ -18,4 +18,4 @@ namespace Email\Exception;
 class InvalidEmailAddressException extends \Exception
 {
 
-} 
+}

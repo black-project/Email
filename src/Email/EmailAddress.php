@@ -22,7 +22,7 @@ final class EmailAddress
     /**
      * @var
      */
-    private $recipent;
+    private $recipient;
 
     /**
      * @var
@@ -52,7 +52,7 @@ final class EmailAddress
      */
     public function __toString()
     {
-        return sprintf("%s@%s.%s", $this->recipent, $this->domain, $this->tld);
+        return sprintf("%s@%s.%s", $this->recipient, $this->domain, $this->tld);
     }
 
     /**
@@ -60,7 +60,7 @@ final class EmailAddress
      */
     public function getValue()
     {
-        return sprintf("%s@%s.%s", $this->recipent, $this->domain, $this->tld);
+        return sprintf("%s@%s.%s", $this->recipient, $this->domain, $this->tld);
     }
 
     /**
@@ -68,7 +68,7 @@ final class EmailAddress
      */
     public function getRecipient()
     {
-        return $this->recipent;
+        return $this->recipient;
     }
 
     /**
@@ -113,8 +113,8 @@ final class EmailAddress
         list($recipient, $domain) = explode("@", $email);
         list($domain, $tld) = explode(".", $domain);
 
-        $this->recipent = $recipient;
-        $this->domain   = $domain;
-        $this->tld      = $tld;
+        $this->recipient = $recipient;
+        $this->domain    = $domain;
+        $this->tld       = $tld;
     }
 }
