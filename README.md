@@ -1,29 +1,17 @@
 Email
 =====
 
-This is the catchphrase. Make it count.
+PHP 5.4+ library to make working with Email safer, easier, and fun!
 
-[![Build Status](https://travis-ci.org/mnapoli/PHP-DI.png?branch=master)](https://travis-ci.org/mnapoli/PHP-DI)
-[![Coverage Status](https://coveralls.io/repos/mnapoli/PHP-DI/badge.png?branch=master)](https://coveralls.io/r/mnapoli/PHP-DI?branch=master)
-[![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/mnapoli/PHP-DI/badges/quality-score.png)](https://scrutinizer-ci.com/g/mnapoli/PHP-DI/)
-[![Latest Stable Version](https://poser.pugx.org/mnapoli/php-di/v/stable.png)](https://packagist.org/packages/mnapoli/php-di)
-[![Total Downloads](https://poser.pugx.org/mnapoli/php-di/downloads.png)](https://packagist.org/packages/mnapoli/php-di)
-
-Here is an additional quick introduction, if necessary.
-
-Why?
-----
-
-Why does this project exist? Come on, don't delete this part. Fill it.
-Yes it's hard, but it's perhaps the most important part of the README.
-
-As to why *this* project exist, it's to serve as a template for future open
-source PHP projects. Of course, feel free to fork it and make your own recipe.
+[![Build Status](https://travis-ci.org/black/PHP-DI.png?branch=master)](https://travis-ci.org/black/email)
+[![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/black/email/badges/quality-score.png)](https://scrutinizer-ci.com/g/black/email/)
+[![Latest Stable Version](https://poser.pugx.org/black/email/v/stable.png)](https://packagist.org/packages/black/email)
+[![Total Downloads](https://poser.pugx.org/black/email/downloads.png)](https://packagist.org/packages/black/email)
 
 Installation
 ------------
 
-The recommended way to install Address is through [Composer][1]:
+The recommended way to install Email is through [Composer][1]:
 
 ```json
 {
@@ -38,7 +26,29 @@ constraint.
 
 Usage
 -----
-`TODO`
+
+Usage is simple. Just create a new EmailEmail, if your email is invalid an `Email\Exception\InvalidEmailEmailException`
+will be thrown. Be aware of this, the validation is on the format, not on a A or MX record in a valid DNS.
+
+```php
+$email = new Email\EmailEmail("foo@bar.com");
+$email->getValue(); // return foot@bar.com
+$email->getValueAsArray() // return ['recipient' => "foo", 'domain' => "bar", 'tld' => "com"]
+```
+
+__List of available getters__
+
+- `getValue()`
+- `getValueAsArray()`
+- `getRecipient()`
+- `getDomain()`
+- `getTld()`
+
+__Check if two email are equals__
+
+`isEqualTo(Email\EmailEmail $email)`: Check if two emails are equals
+
+
 
 License
 -------
