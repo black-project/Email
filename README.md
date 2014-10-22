@@ -49,7 +49,12 @@ __Check if two email are equals__
 
 `isEqualTo(Email\EmailEmail $email)`: Check if two emails are equals
 
+__WARNING__
 
+`FILTER_VALIDATE_EMAIL` will not works with non-standard ASCII characters so an email like this
+`me@domain.中国` will throw an InvalidEmailAddressException.
+
+`FILTER_VALIDATE_EMAIL` don't know rules of providers. `0me@hotmail.com` is invalid for hotmail but valid for PHP.
 
 License
 -------

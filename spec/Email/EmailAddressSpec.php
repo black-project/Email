@@ -60,4 +60,17 @@ class EmailAddressSpec extends ObjectBehavior
         $email = new EmailAddress("recipient@domain.tld");
         $this->isEqualTo($email)->shouldReturn(true);
     }
+
+    public function it_should_explode_a_tld_with_two_dots()
+    {
+        $this->beConstructedWith("recipient@domain.co.uk");
+        $this->getTld()->shouldReturn("co.uk");
+    }
+
+    public function it_should_not_works_with_unicode_because_of_validate_email()
+    {
+        $this
+            ->shouldThrow('Email\Exception\InvalidEmailAddressException')
+            ->during('__construct', ['recipient@domain.中国']);
+    }
 }

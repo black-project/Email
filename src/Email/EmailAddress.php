@@ -111,7 +111,7 @@ final class EmailAddress
     private function explodeEmail($email)
     {
         list($recipient, $domain) = explode("@", $email);
-        list($domain, $tld) = explode(".", $domain);
+        list($domain, $tld) = explode(".", $domain, 2);
 
         $this->recipient = $recipient;
         $this->domain    = $domain;
