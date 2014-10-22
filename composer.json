@@ -1,10 +1,17 @@
 {
     "name": "black/email",
+    "type": "library",
     "description": "A simple email value object for your projects",
     "keywords": ["library", "black-project", "email", "value-object"],
     "homepage": "http://www.lablackroom.com",
     "license": "MIT",
-    "type": "library",
+    "authors": [
+        {
+            "name": "Alexandre 'pocky' Balmes",
+            "email": "alexandre@lablackroom.com",
+            "homepage": "http://www.lablackroom.com"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "Email\\": "src/Email/"
