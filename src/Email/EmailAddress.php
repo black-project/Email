@@ -17,7 +17,7 @@ use Email\Exception\InvalidEmailAddressException;
  * @author Alexandre Balmes <alexandre@lablackroom.com>
  * @license http://opensource.org/licenses/mit-license.php MIT
  */
-final class EmailAddress
+class EmailAddress
 {
     /**
      * @var
