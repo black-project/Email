@@ -1,1 +1,5 @@
 formatter.name: progress
+
+extensions:
+  - Memio\SpecGen\MemioSpecGenExtension
+  - PhpSpec\Extension\CodeCoverageExtension
