@@ -41,7 +41,7 @@ class BlackEmailBundle extends Bundle
                 DoctrineOrmMappingsPass::createXmlMappingDriver(
                     $mappings,
                     [],
-                    'application.backend_type_orm'
+                    'black_email.backend_type_orm'
                 ));
         }
 
@@ -52,7 +52,7 @@ class BlackEmailBundle extends Bundle
                 DoctrineMongoDBMappingsPass::createXmlMappingDriver(
                     $mappings,
                     [],
-                    'application.backend_type_mongodb'
+                    'black_email.backend_type_mongodb'
                 ));
         }
     }
