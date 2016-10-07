@@ -1,21 +1,11 @@
 <?php
-/*
- * This file is part of the Email package.
- *
- * (c) Alexandre Balmes <alexandre@lablackroom.com>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
+
 namespace Email;
 
 use Email\Exception\InvalidEmailAddressException;
 
 /**
  * Class EmailAddress
- *
- * @author Alexandre Balmes <alexandre@lablackroom.com>
- * @license http://opensource.org/licenses/mit-license.php MIT
  */
 class EmailAddress
 {
@@ -35,13 +25,14 @@ class EmailAddress
     private $tld;
 
     /**
+     * EmailAddress constructor.
      * @param $email
      * @throws InvalidEmailAddressException
      */
     public function __construct($email)
     {
         if (false === filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            throw new InvalidEmailAddressException(sprintf("%s is not a valid email address", $email));
+            throw new InvalidEmailAddressException("{$email} is not a valid email address");
         }
 
         $this->explodeEmail($email);
@@ -50,9 +41,9 @@ class EmailAddress
     /**
      * @return string
      */
-    public function __toString()
+    public function __toString() : string
     {
-        return sprintf("%s@%s.%s", $this->recipient, $this->domain, $this->tld);
+        return $this->getValue();
     }
 
     /**
@@ -60,13 +51,13 @@ class EmailAddress
      */
     public function getValue()
     {
-        return sprintf("%s@%s.%s", $this->recipient, $this->domain, $this->tld);
+        return "{$this->recipient}@{$this->domain}.{$this->tld}";
     }
 
     /**
      * @return mixed
      */
-    public function getRecipient()
+    public function getRecipient() : string
     {
         return $this->recipient;
     }
@@ -74,7 +65,7 @@ class EmailAddress
     /**
      * @return mixed
      */
-    public function getDomain()
+    public function getDomain() : string
     {
         return $this->domain;
     }
@@ -82,7 +73,7 @@ class EmailAddress
     /**
      * @return mixed
      */
-    public function getTld()
+    public function getTld() : string
     {
         return $this->tld;
     }
@@ -90,7 +81,7 @@ class EmailAddress
     /**
      * @return array
      */
-    public function getValueAsArray()
+    public function getValueAsArray() : array
     {
         return [
             'recipient' => $this->getRecipient(),
@@ -99,7 +90,7 @@ class EmailAddress
         ];
     }
 
-    public function isEqualTo(EmailAddress $email)
+    public function isEqualTo(EmailAddress $email) : bool
     {
         return $this->getValue() === $email->getValue();
     }

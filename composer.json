@@ -14,11 +14,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "Email\\": "src/Email/"
+            "Email\\": "src/Email/",
+            "Black\\Bundle\\EmailBundle\\": "src/Email/Symfony/EmailBundle/"
         }
     },
     "require": {
-        "php": ">=5.4"
+        "php": ">=7.0"
     },
     "require-dev": {
         "phpspec/phpspec": "~2.2",
